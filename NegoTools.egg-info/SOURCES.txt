@@ -1,0 +1,12 @@
+README.md
+setup.py
+NegoTools.egg-info/PKG-INFO
+NegoTools.egg-info/SOURCES.txt
+NegoTools.egg-info/dependency_links.txt
+NegoTools.egg-info/not-zip-safe
+NegoTools.egg-info/requires.txt
+NegoTools.egg-info/top_level.txt
+hyperheuristic/__init__.py
+hyperheuristic/hyperheuristic.py
+isItWorking/__init__.py
+isItWorking/isItWorking.py
