@@ -5,13 +5,17 @@ from pandas import Series
 
 class ThompsonSampling():
   def __init__(self, labels):
-    self.means = Series([0.5, 0.5, 0.5, 0.5])
-    self.variances = Series([0.1, 0.1, 0.1, 0.1])
-    self.effective_sizes = Series([10, 10, 10, 10])
+    self.means = [0.5 for i in range(len(labels))]
+    self.variances = [0.1 for i in range(len(labels))]
+    self.effective_sizes = [10 for i in range(len(labels))]
     self.labels = labels
 
     pr = BetaPrior()
-    pr.add_multiple(self.means, self.variances, self.effective_sizes, Series(self.labels))
+    pr.add_multiple(Series(self.means), 
+                    Series(self.variances), 
+                    Series(self.effective_sizes), 
+                    Series(self.labels)
+                )
     
     self.experiment = BernoulliExperiment(priors = pr)
 
@@ -38,4 +42,3 @@ class ThompsonSampling():
       self.experiment.add_rewards(rewards)
     except Exception as e:
       print(f"Thompson Sampling Class Error: {e}\n") 
-

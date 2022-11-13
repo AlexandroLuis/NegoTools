@@ -1,11 +1,5 @@
-class multiply():
-    def __init__(self):
-        self.a = 3
-        self.n = 7
+class sum():
+    def myfunc(a, b):
+      return int(a)+int(b)
 
-    def myfunc(self):
-      return lambda self.a : self.a * self.n
-
-    mytripler = myfunc(self.a)
-
-    print(mytripler(self.n))
+    print(myfunc(3, 7))
