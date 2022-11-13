@@ -11,4 +11,3 @@ setup(
         'thompson-sampling'
     ],
     zip_safe=False
-)

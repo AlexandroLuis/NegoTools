@@ -42,3 +42,4 @@ class ThompsonSampling():
       self.experiment.add_rewards(rewards)
     except Exception as e:
       print(f"Thompson Sampling Class Error: {e}\n") 
+      
