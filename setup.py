@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='NegoTools', 
-    version='0.8', 
+    version='0.9', 
     description='nego tools',
     author='Alexandro Rocha', 
     url='https://github.com/AlexandroLuis/NegoTools',
