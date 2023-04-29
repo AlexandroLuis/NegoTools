@@ -1,1 +1,0 @@
-from .isItWorking import multiply

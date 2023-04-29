@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='NegoTools', 
-    version='0.7', 
+    version='0.8', 
     description='nego tools',
     author='Alexandro Rocha', 
     url='https://github.com/AlexandroLuis/NegoTools',
@@ -13,9 +13,7 @@ setup(
     packages=[
     	'hyperheuristic',
     	'Scientific',
-    	'Scientific.Regression',
     	'Scientific.Clustering',
-    	'Scientific.Classification',
     ],
     install_requires=[
         'thompson-sampling',
@@ -23,6 +21,7 @@ setup(
         'random2',
         'numpy',
         'matplotlib',
+        'scikit-learn'
     ],
     zip_safe=False
 )
