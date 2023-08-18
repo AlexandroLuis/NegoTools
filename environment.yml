@@ -1,0 +1,32 @@
+name: Test Python Library
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        
+    - name: Install Miniconda
+      run: |
+        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+        source $HOME/miniconda/etc/profile.d/conda.sh
+        conda activate base
+        
+    - name: Create Conda environment
+      run: conda env create -f path/to/environment.yml
+        
+    - name: Activate Conda environment
+      run: conda activate myenv
+        
+    - name: Run tests
+      run: python -m pytest
